@@ -19,6 +19,7 @@
     "react-router-dom": "^7.6.2",
     "socket.io-client": "^4.8.1",
     "tailwindcss": "^4.1.10",
+    "zingchat": "file:..",
     "zustand": "^5.0.5"
   },
   "devDependencies": {

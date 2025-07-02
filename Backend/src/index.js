@@ -6,8 +6,11 @@ import messageRoutes from './routes/message.route.js'
 import cookieParser from 'cookie-parser'
 import cors from "cors"
 import {app,server} from "./lib/socket.js"
+import path from "path"
 
 dotenv.config()
+
+const __dirname = path.resolve();
 
 
 app.use(express.json())
@@ -18,6 +21,14 @@ app.use(cors({
 }))
 app.use("/api/auth",authRoutes)
 app.use("/api/messages",messageRoutes)
+
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static(path.join(__dirname,"../Frontend/dist")))
+
+    app.get("*",(req,res) => {
+        res.sendFile(path.join(__dirname,"../Frontend","dist","index.html"));
+    })
+}
 
 
 const PORT = process.env.PORT || 8080;

@@ -1,0 +1,21 @@
+{
+  "name": "zingchat",
+  "version": "1.0.0",
+  "description": "ZingChat is a full-stack real-time chat application built with the **MERN** stack and **Socket.IO**. It offers seamless real-time communication, user authentication, image sharing, and presence indicators. Built with performance and user experience in mind.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend ",
+    "start": "npm run start --prefix Backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Priyanshu-Karki08/ZingChat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Priyanshu-Karki08/ZingChat/issues"
+  },
+  "homepage": "https://github.com/Priyanshu-Karki08/ZingChat#readme"
+}
